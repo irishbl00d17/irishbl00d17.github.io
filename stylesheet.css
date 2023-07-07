@@ -1,0 +1,273 @@
+*{
+	font: italic;
+
+}
+
+body{
+	min-height: 100vh;
+	background-image: -webkit-linear-gradient(silver, black);
+	background-size: cover;
+    color: rgba(255, 255, 255, 0.801);
+    font-size: 20px;
+}
+
+.container{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.bubbles {
+	position: relative;
+	display: flex;
+}
+
+.bubbles span {
+	position: relative;
+	width: 60px;
+	height: 40px;
+	background: #3a3a3acc;
+	margin: 0 4px;
+	border-radius: 50%;
+	box-shadow: 0 0 0 10px #3a3a3acc, 0 0 50px #3a3a3acc, 0 0 100px #3a3a3acc;
+	animation: animate 15s linear infinite;
+	animation-duration: calc(190s / var(--i));
+}
+
+.bubbles span:nth-child(even){
+	background: #ffffff79;
+	box-shadow: 0 0 0 10px #ffffff79, 0 0 50px #ffffff79, 0 0 100px #ffffff;
+}
+
+.menu {
+    width: 850px;
+    margin: 200px auto;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+#top-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#top-tabs > div {
+    margin-left:40px;
+    font-family: fontawsome;
+    font-size: 45px;
+    color: rgb(36, 65, 143);
+    cursor: pointer;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.623);
+}
+
+#content-area {
+    background: rgb(36, 100, 143);
+	display: flex;
+    width: 100%;
+    min-height: 365px;
+    margin-top: 35px;
+    padding: 5%;
+}
+
+#content-area > div {
+    display: none;
+}
+
+#content-area > div:first-child {
+    display: flex;
+}
+
+#home {
+	flex-direction: row-reverse ;
+	padding-right: 10%;
+}
+
+
+h1 {
+	font-size: 45px;
+	margin: -20px 64px -10px;
+	text-decoration: underline;
+}
+h2 {
+	font-size: 30px;
+	margin: 20px 140px 15px;
+}
+
+#work {
+	display: flex;
+	flex-direction: column;
+}
+
+.work-intro {
+	text-align: center;
+	text-decoration: underline;
+	font-size: 50px;
+
+}
+
+.work-items > img {
+	height: 15vh;
+	width: 15vh;
+	padding: 20px;
+	margin-top: 35px;
+	border-radius: 100%;
+}
+
+.work-html {
+	margin: 0 4px;
+	border-radius: 50%;
+}
+
+.work-html:hover{
+	animation: wiggle 1.75s linear infinite;
+	cursor: pointer;
+}
+
+.work-css {
+	width: 100vh;
+}
+
+
+.work-css:hover {
+	animation: roll 1.75s linear infinite;
+	cursor: pointer;
+}
+
+.work-js:hover{
+	animation: bounce 2s  linear infinite;
+	cursor: pointer;
+}
+
+.work-py:hover{
+	animation: python 2s linear infinite;
+	cursor: pointer;
+}
+
+@keyframes python {
+	0% {
+		transform: scale(1);
+	}
+	25%{
+		transform: scale(1.5);
+	}
+	50% {
+		transform: scale(1);
+	}
+	75%{
+		transform: scale(0.5);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+
+@keyframes bounce {
+	0% {
+		transform: translateY(0);
+	}
+	25% {
+		transform: translateY(-50px);
+	}
+	50%{
+		transform: translateY(5px);
+	}
+	75%{
+		transform: translateY(60px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes roll {
+	0% {
+		transform: rotateZ(0);
+	}
+	25% {
+		transform: rotateZ(90deg); 
+	}
+	50% {
+		transform: rotateZ(180deg);
+	}
+	75% {
+		transform: rotateZ(270deg);
+	}
+	100% {
+		transform: rotateZ(360deg);
+	}
+}
+
+@keyframes wiggle {
+	0%, 7% {
+	  transform: rotateZ(0);
+	}
+	15% {
+	  transform: rotateZ(-15deg);
+	}
+	20% {
+	  transform: rotateZ(10deg);
+	}
+	25% {
+	  transform: rotateZ(-10deg);
+	}
+	30% {
+	  transform: rotateZ(6deg);
+	}
+	35% {
+	  transform: rotateZ(-4deg);
+	}
+	40%, 100% {
+	  transform: rotateZ(0);
+	}
+  }
+
+  @keyframes animate {
+	0%{
+		transform: translateY(100vh) scale(.25);
+	}
+	50%{
+		transform: translateY(50vh) scale(1.0);
+	}
+	100%{
+			transform: translateY(-10vh) scale(.15);
+	}
+
+}
+
+
+#contact {
+	padding-left: 75px;
+}
+
+input[type=text] {
+	width: 90%; 
+	padding: 12px; 
+	border: 1px solid #ccc; 
+	border-radius: 4px; 
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+	
+  }
+
+input[type=submit] {
+	background-color: #0d10bb;
+	color: white;
+	padding: 14px 40px;
+	border: none;
+	border-radius: 40px;
+	cursor: pointer;
+	padding-top: 10px;
+    font-size: 17px;
+  }
+
+#subject {
+	width: 90%;
+	padding: 10px 0 50px;
+	border: 2px #ccc;
+	margin-bottom: 50px;
+}
